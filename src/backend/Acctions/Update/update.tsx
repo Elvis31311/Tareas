@@ -1,17 +1,17 @@
 import { supabase } from '../../Conection/conection';
 
-export const updateProduct = async (
+export const updateTarea = async (
     id: number,
-    updates: { nombre?: string; precio?: number; descripcion?: string; estado?: boolean }
+    updates: { tarea?: string; fecha?: string; hora?: string; estado?: boolean }
 ) => {
     const { data, error } = await supabase
-        .from('productos')
+        .from('tareas')
         .update(updates)
         .eq('id', id)
         .select();
 
     if (error) {
-        console.error('Error updating product:', error.message);
+        console.error('Error updating tarea:', error.message);
         throw new Error(error.message);
     }
     return data;
