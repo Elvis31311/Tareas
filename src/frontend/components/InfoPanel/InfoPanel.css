@@ -1,0 +1,23 @@
+.glass-panel {
+  width: 100%;
+  max-width: 440px;
+  /* Made slightly wider to fit inputs comfortably */
+  height: auto;
+  min-width: 320px;
+  background-color: #1e293b;
+  /* Solid slate-800 color instead of transparent */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  /* Heavy box shadow to lift it up */
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.glass-panel img {
+  max-width: 100%;
+  height: auto;
+}
